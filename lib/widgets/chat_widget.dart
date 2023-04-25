@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:chat_gtp/constants/constants.dart';
 import 'package:chat_gtp/services/assets_manager.dart';
 import 'package:chat_gtp/widgets/text_widget.dart';
@@ -5,7 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ChatWidget extends StatelessWidget {
-  const ChatWidget({super.key, required this.msg, required this.chatIndex});
+  const ChatWidget(
+      {super.key,
+      required this.msg,
+      required this.chatIndex,
+      required bool shouldAnimate});
 
   final String msg;
   final int chatIndex;
@@ -29,9 +34,26 @@ class ChatWidget extends StatelessWidget {
                   height: 30,
                 ),
                 Expanded(
-                  child: TextWidget(
-                    label: msg,
-                  ),
+                  child: chatIndex == 0
+                      ? TextWidget(
+                          label: msg,
+                        )
+                      : DefaultTextStyle(
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16),
+                          child: AnimatedTextKit(
+                              isRepeatingAnimation: false,
+                              repeatForever: false,
+                              displayFullTextOnTap: true,
+                              totalRepeatCount: 1,
+                              animatedTexts: [
+                                TyperAnimatedText(
+                                  msg.trim(),
+                                )
+                              ]),
+                        ),
                 ),
                 chatIndex == 0
                     ? const SizedBox.shrink()

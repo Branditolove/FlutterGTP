@@ -4,26 +4,26 @@ import 'package:flutter/material.dart';
 Color scaffoldBackgroundColor = const Color(0xFF343541);
 Color cardColor = const Color(0xFF444654);
 
-List<String> models = [
-  "Model1",
-  "Model2",
-  "Model3",
-  "Model4",
-  "Model5",
-  "Model6",
-];
-List<DropdownMenuItem<String>>? get getModelsItem {
-  List<DropdownMenuItem<String>>? modelsItems =
-      List<DropdownMenuItem<String>>.generate(
-          models.length,
-          (index) => DropdownMenuItem(
-              value: models[index],
-              child: TextWidget(
-                label: models[index],
-                fontSize: 15,
-              )));
-  return modelsItems;
-}
+// List<String> models = [
+//   "Model1",
+//   "Model2",
+//   "Model3",
+//   "Model4",
+//   "Model5",
+//   "Model6",
+// ];
+// List<DropdownMenuItem<String>>? get getModelsItem {
+//   List<DropdownMenuItem<String>>? modelsItems =
+//       List<DropdownMenuItem<String>>.generate(
+//           models.length,
+//           (index) => DropdownMenuItem(
+//               value: models[index],
+//               child: TextWidget(
+//                 label: models[index],
+//                 fontSize: 15,
+//               )));
+//   return modelsItems;
+// }
 
 final chatMessages = [
   {
@@ -78,12 +78,12 @@ final chatMessages = [
   },
 
   {
-    "msg": "Quien le gusta a Brandon?",
+    "msg": "Quien le gusta a Brandon Diaz de Durango?",
     "chatIndex": 0,
   },
   {
     "msg":
-        "a Brandon le gusta mucho una chica llamada Brenda que es mas blanca que la nieve.",
+        "a Brandon le gusta mucho una chica llamada Jahtziri. SI VEZ ESTO TE QUEREMOS MUCHO <3",
     "chatIndex": 1,
   },
 
@@ -112,4 +112,14 @@ final chatMessages = [
     "chatIndex": 0,
   },
   {"msg": "Yo no tengo la necesidad de comer soy un programa."},
+
+  {
+    "msg": "Soy Juju Martinez de Durango",
+    "chatIndex": 0,
+  },
+  {
+    "msg":
+        "Mi creador y yo compartimos la idea de no hay niña mas chula que tu flaquita.",
+    "chatIndex": 1,
+  },
 ];
