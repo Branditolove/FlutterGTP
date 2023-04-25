@@ -114,7 +114,7 @@ final chatMessages = [
   {"msg": "Yo no tengo la necesidad de comer soy un programa."},
 
   {
-    "msg": "Soy Juju Martinez de Durango",
+    "msg": "Soy Jahtziri.",
     "chatIndex": 0,
   },
   {
